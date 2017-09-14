@@ -1,0 +1,36 @@
+
+    <ul class="pro-list f-cb">
+        {{#list}}
+        <li class="u-shadow-box" id="{{id}}">
+            <img class="img-1" src="{{middlePhotoUrl}}" alt="{{name}}">
+            <p class="pro-title u-title">{{name}}</p>
+            <p class="pro-author">{{provider}}</p>
+            <div class="fans"><span>{{learnerCount}}</span></div>
+            {{#price}}
+            <div class="price">￥{{price}}</div>
+            {{/price}}
+            {{^price}}
+            <div class="price">免费</div>
+            {{/price}}
+            <div class="m-detail">
+                <div class="intro f-cb">
+                    <div class="img-box f-fl">
+                        <img src="{{middlePhotoUrl}}" alt="{{}}">
+                    </div>
+                    <div class="detail f-fl">
+                        <h3>{{name}}</h3>
+                        <p class="fans">{{learnerCount}}人在学</p>
+                        <p class="release">发布者：<span>{{provider}}</span></p>
+                        <p class="category">分类：{{categoryName}}</p>
+                    </div>
+                </div>
+                <div class="desc">
+                    <p>{{description}}</p>
+                </div>
+            </div>
+        </li>
+        {{/list}}
+    </ul>
+    <div class="m-page">
+
+    </div>

@@ -6,7 +6,7 @@ html,body,img{border: 0;}
 i,em{font-style: normal;}
 li{list-style: none;}
 h1,h2,h3{font-size: 100%;}
-body,input,button,select{font-size: 12px/1.14 arial;color:#333;outline:0;}
+body,input,button,select{font: 12px/1.14 arial;color:#333;outline:0;}
 a,button{cursor: pointer;}
 a{text-decoration: none;}
 a,a:hover{color: #333;}
@@ -41,10 +41,10 @@ a,a:hover{color: #333;}
 html,body{
     height: 100%;
     min-width: 960px;
+    background-color: #f8f8f8;
 }
 
 .g-w{
-    height: 100%;
     width: 1205px;
     margin: 0 auto;
 }

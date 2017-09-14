@@ -1,0 +1,9 @@
+{{#list}}
+<li class="f-cb">
+    <div class="f-fl img-box"><img src="{{smallPhotoUrl}}" alt="{{name}}"></div>
+    <div class="f-fr">
+        <p class="hot-title u-title">{{name}}</p>
+        <div class="fans">{{learnerCount}}</div>
+    </div>
+</li>
+{{/list}}
