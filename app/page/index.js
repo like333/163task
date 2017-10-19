@@ -2,7 +2,7 @@
  * @Author: like 
  * @Date: 2017-09-08 09:56:49 
  * @Last Modified by: like
- * @Last Modified time: 2017-09-14 11:06:23
+ * @Last Modified time: 2017-10-19 23:02:46
  */
 'use strict'
 require('./layout.css')
@@ -166,11 +166,22 @@ var index = {
         $(document).on('mouseout', '.pro-list li', function () {
             $(this).find('.m-detail').hide()
         })
+        var videoStr = ` <video width="889px" height="567px"  controls>
+        <source src="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4" type="video/mp4">
+        抱歉，您的浏览器不支持内嵌视频，不过不用担心，你可以 <a target="_blank" href="http://mov.bn.netease.com/open-movie/nos/mp4/2014/12/30/SADQ86F5S_shd.mp4">观看</a>
+
+        并用你喜欢的播放器观看!
+    </video>`
         $('.m-side .video-preview').click(function () {
             $(".m-mask").show()
+            console.log($(".m-mask video"))
+            if ($(".m-mask video").length === 0) {
+                $('.m-mask .videoPlayer').append($(videoStr))
+            }
         })
         $('.m-video .close').click(function () {
             $(".m-mask").hide()
+            $('.m-mask video').remove()
         })
     },
     // 检查提醒cookie
@@ -228,6 +239,7 @@ var index = {
     },
     // 登录
     login: function () {
+        console.log('show')
         $('.m-login-mask').show()
     },
     // 检测是否已关注
@@ -315,13 +327,13 @@ var index = {
     },
     //课程更新
     refreshCourse: function () {
-        var timer = null, $hotList = $('.m-hot .hot-list'),n=0,d=72
+        var timer = null, $hotList = $('.m-hot .hot-list'), n = 0, d = 72
         timer = setInterval(function () {
-            $hotList.css({'transition': '.5s','transform' : 'translateY(-72px)'})
+            $hotList.css({ 'transition': '.5s', 'transform': 'translateY(-72px)' })
             setTimeout(function () {
                 var $firstChild = $('.m-hot .hot-list li').eq(0).remove()
                 $hotList.append($firstChild)
-                $hotList.css({'transition': '0s','transform' : 'translateY(0px)'})
+                $hotList.css({ 'transition': '0s', 'transform': 'translateY(0px)' })
             }, 1e3)
         }, 5e3)
     }

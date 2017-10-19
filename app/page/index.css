@@ -2,7 +2,8 @@
 body{
     position: relative;
 }
-.m-mask{
+
+.m-mask,.m-login-mask{
     display: none; 
     position: fixed;  
     width: 100%;
@@ -14,13 +15,13 @@ body{
     background:rgba(0,0,0,.5);
     z-index: 999;
 }
-.m-mask .close{
+.m-login .close,.m-mask .close{
     font-size: 24px;
     font-weight: bold;
     color: #666666;
     cursor: pointer;
 }
-.m-mask h3{
+.m-login h3 ,.m-mask h3{
     font-size: 18px;
 }
 .m-login{
